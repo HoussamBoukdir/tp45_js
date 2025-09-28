@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="Call f1" onclick="f1()">
+    <input type="button" value="Call f2" onclick="f2('Nabil')">
+    <!---->
+    <input type="button" value="Call f3" onclick="f3('Alaoui',3)">
+<script>
+    function f1(){
+        alert("Appel de f1");
+    };
+
+    function f2(a){
+        alert("Bonjour " + a);
+    };
+
+    let s1=f3(2,3);
+    let s2=f3("Alaoui",3);
+    console.log(s1);//5
+    console.log(s2);//Alaoui
+    function f3(a, b){
+        return a+b;
+       
+    };
+
+    function f4(){
+        let a1=1;
+        let a2=2;
+        a3=3;
+    }
+    f4();
+    console.log(a3);
+
+
+    function f5(n){
+        if(n<0){
+            return null;
+        }
+        let fact=1;
+        for(let i=1;i<=n; i++){
+            fact*=i;//fact=fact*i
+        }
+        return fact;
+    }
+    console.log(f5(5));//120
+
+    let f6=(x,y)=>x+y;
+    /*
+    fu
+    */
+    function f7(x,y){
+        return x+y;
+    }
+    console.log(f6(2,4));//6
+
+    let somme=f7;
+    console.log(somme(2,4));
+
+    let t1=["Ahmed","7oussem","Sim0","AFD"];
+    t1.forEach(function(x){
+        console.log(x);
+    })
+    t1.forEach(x=>console.log(x));
+
+    let carre(x)=>x*x;
+    console.log(carre(3));
+    let affiche=(msg)=>{console.log("APPEL DE LA FONCTION AFFICHE");
+        console.log(msg);}
+        affiche("Bonjour");
+
+
+</script>
+
+</body>
+</html>
